@@ -41,10 +41,10 @@ public class resolucionMaru {
     /*Delimita el recorrido. De llegar al limite y no haber terminado 
     la recursividad en ningun paso previo, concluye escribiendo VERDADERO*/ 
     if ((i != m.length - 1 || j != m[0].length - 1)) {
-      // utiliza compara para verificar simetria. De ser Falso, escribe falso y se termina la recursividad
+      // utiliza modulo compara para verificar simetria. De ser Falso, escribe falso y se termina la recursividad
       if (compara(m[i][j], m[j][i])) {
         /*BLOQUE MUY IMPORTANTE. Si j-columnas es la ultima posicion cambia la i-fila 
-        y resetea la j-columnas, suno ++ j-col*/
+        y resetea la j-columnas, sino hace +1 a j-col*/
         if (j == m[0].length - 1) {
           i++;
           j = 0;
