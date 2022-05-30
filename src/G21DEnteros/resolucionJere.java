@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class resolucionJere {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //Arreglo usado para testeo. 
         int[] arreglo = {1,2,1,2,2,12,5};
         int n;
         System.out.println("Ingrese el valor de N");
@@ -14,6 +15,7 @@ public class resolucionJere {
     }
 
     public static int elemMenorValor (int [] arreglo, int n, int posicion){
+        //Dado un arreglo y un numero, retorna el menor numero al ingresado encontrado en el arreglo.
         int resultado;
         if(posicion!=arreglo.length-1){
             resultado = elemMenorValor(arreglo, n, posicion+1);

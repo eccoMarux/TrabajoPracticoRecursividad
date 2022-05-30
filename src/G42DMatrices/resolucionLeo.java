@@ -36,34 +36,36 @@ public class resolucionLeo {
         }
     }
 
-    // Modificar para que el retorno sea booleano y NO sout.
     public static boolean analizaSimetriaMatriz(int[][] m, int i, int j) {
+        //Revisa si la matriz es simetrica respecto a la diagonal principal. Retorna True de ser simetrica, false de no serlo.
         boolean existencia;
         if (compara(m[i][j], m[j][i])) {
             existencia = true;
+
+            //Aumenta el valor de i o j.
             if (j == m[0].length - 1) {
                 i++;
                 j = 0;
             } else {
                 j++;
             }
-            if (existencia && (i != m.length - 1 || j != m[0].length - 1)) {
+            //Evalua que no se extienda del rango de la matriz.
+            if (i != m.length - 1 || j != m[0].length - 1) {
                 existencia = analizaSimetriaMatriz(m, i, j);
             }
         } else {
+            //Si compara es falso, entonces existencia es falso.
             existencia = false;
         }
         return existencia;
     }
 
     public static boolean compara(int elemento1, int elemento2) {
-        // Modulo que compara dos valores dados por parametro, retorna true de ser
-        // iguales, false de ser distintos.
+        // Modulo que compara dos valores dados por parametro, retorna true de ser iguales, false de ser distintos.
         boolean iguales = true;
         if (elemento1 != elemento2) {
             iguales = false;
         }
         return iguales;
     }
-    //a
 }
