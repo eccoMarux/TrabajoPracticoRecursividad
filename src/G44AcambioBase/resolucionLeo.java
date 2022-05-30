@@ -2,9 +2,9 @@ package G44AcambioBase;
 
 public class resolucionLeo {
     public static void main(String[] args) {
-        int numero = 5;
+        int numero = -5;
         System.out.println(decimalABinario(numero));
-    }
+    } 
 
     public static String decimalABinario(int num){
         //Para convertir un numero decimal a binario:
@@ -14,8 +14,12 @@ public class resolucionLeo {
         int restoNum;
         int cociente;
 
-        if(num<2){ //Mientras el numero sea menor a 2 se podria seguir dividiendo 
-            cadenaBinario = "1";
+        if(num<2){ //Mientras el numero sea menor a 2 se podria seguir dividiendo
+            if(num!=0){
+                cadenaBinario = "1";
+            }else{
+                cadenaBinario = "0";
+            }
         }else{
             restoNum = num%2;
                //El resto de la divison del numero que se iria guardando en una cadena de texto en el apilado 
