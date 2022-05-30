@@ -22,7 +22,7 @@ public class resolucionLeo {
     public static boolean verificacionPalabra(String palabra, int izq, int der) {
         boolean similar = true;
 
-        if (izq < der) { // Caso iterativo: mientras la izq sea menor a la der
+        if (izq < der) { // Caso Recursivo: mientras la izq sea menor a la der
             if (palabra.charAt(izq) == palabra.charAt(der)) { // Se compara letra por letra de los extremos hacia el
                                                               // centro
                 similar = verificacionPalabra(palabra, izq + 1, der - 1); // Se repite hacia dentro
